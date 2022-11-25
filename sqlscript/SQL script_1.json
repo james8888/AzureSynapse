@@ -1,0 +1,17 @@
+{
+	"name": "SQL script_1",
+	"properties": {
+		"content": {
+			"query": "select * \nfrom OPENROWSET(\n    BULK 'https://shonaadlsgen2.dfs.core.windows.net/sysnapsedemo/employees.csv',\n    FORMAT = 'CSV',\n    HEADER_ROW =TRUE ,\n    PARSER_VERSION ='2.0'\n) as [result]",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "master",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
